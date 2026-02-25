@@ -26,8 +26,8 @@ const createOrder = async ({
         const result = await db.transaction(async (tx) => {
             
             let shipping_cost = 0;
-            if (total_ammount < 10000)
-                shipping_cost = 1000;
+            if (total_ammount < 50000)
+                shipping_cost = 2500;
 
             // 1. Insert Order
             const [newOrder] = await tx

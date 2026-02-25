@@ -56,8 +56,8 @@ export const createPaymentSession = async ({ items }) => {
             };
         });
 
-        const SHIPPING_THRESHOLD = 10000; 
-        const STANDARD_SHIPPING_COST = 1000;
+        const SHIPPING_THRESHOLD = 50000; 
+        const STANDARD_SHIPPING_COST = 2500;
 
         if (calculatedSubtotal < SHIPPING_THRESHOLD) {
             line_items.push({

@@ -112,8 +112,8 @@ export const placeOrderController = async (req, res) => {
         }
 
         let shipping_cost = 0;
-        if (orderData.total_ammount < 10000)
-            shipping_cost = 1000;
+        if (orderData.total_ammount < 50000)
+            shipping_cost = 2500;
 
         const orderDetails=await fetchDetailsWithId(insertResult.orderId)
         const items=orderDetails.items
