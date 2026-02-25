@@ -16,7 +16,12 @@ const app = express();
 app.use(helmet());
 
 app.use(cors({
-  origin: "http://localhost:8080",
+  origin: ["http://localhost:8080",
+    "https://jadeintimo-frontend-production.up.railway.app",
+    "https://jadeintimo.ro",
+    "https://www.jadeintimo.ro"
+    ],
+  
   credentials: true
 }));
 
